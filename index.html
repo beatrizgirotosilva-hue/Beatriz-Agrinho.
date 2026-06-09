@@ -4,178 +4,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 - Campo e Cidade</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AgroInflação - Análise Econômica do Campo</title>
+    <style>
+        /* Reset básico e fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #1b4332;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #52b788;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #52b788;
+        }
+
+        /* Seção Principal (Hero) */
+        .hero {
+            background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(27, 67, 50, 0.9)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 100px 5% 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #d8f3dc;
+        }
+
+        .btn {
+            background-color: #52b788;
+            color: #1b4332;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #74c69d;
+        }
+
+        /* Container de Conteúdo */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1b4332;
+            margin-bottom: 40px;
+        }
+
+        /* Grid de Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid #2d6a4f;
+        }
+
+        .card h3 {
+            color: #1b4332;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* Seção Informativa */
+        .info-block {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+
+        .info-block h2 {
+            margin-bottom: 15px;
+            color: #74c69d;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1b4332;
+            color: #74c69d;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>AGRINHO 2026</h1>
-        <p>Campo e Cidade: Conectando Oportunidades</p>
+        <div class="logo">AgroInflação</div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#impactos">Impactos</a>
+            <a href="#analise">Análise</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#campo">Campo</a>
-        <a href="#cidade">Cidade</a>
-        <a href="#sustentabilidade">Sustentabilidade</a>
-    </nav>
-
-    <section id="inicio" class="banner">
-        <div class="overlay">
-            <h2>Construindo um Futuro Sustentável</h2>
-            <p>O campo produz, a cidade transforma e todos crescem juntos.</p>
-        </div>
+    <section class="hero">
+        <h1>A Inflação Dentro da Porteira</h1>
+        <p>Entenda como a alta nos custos de produção, fertilizantes e logística impacta diretamente a rentabilidade do produtor rural e o preço final dos alimentos na mesa do consumidor.</p>
+        <a href="#impactos" class="btn">Analisar Impactos</a>
     </section>
 
-    <section id="sobre" class="conteudo">
-        <h2>Sobre o Projeto</h2>
-        <p>
-            O Programa Agrinho incentiva a educação, a sustentabilidade,
-            a inovação e a valorização da relação entre o campo e a cidade.
-            Este site apresenta como a tecnologia e a conscientização podem
-            ajudar a construir um futuro melhor para todos.
-        </p>
-    </section>
+    <main class="container">
+        <h2 id="impactos" class="section-title">Os Três Principais Vilões do Custo</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>1. Insumos e Fertilizantes</h3>
+                <p>A dependência do mercado externo para matérias-primas como potássio, fósforo e nitrogênio deixa o agro vulnerável às oscilações do dólar e conflitos geopolíticos, encarecendo a plantação.</p>
+            </div>
 
-    <section id="campo" class="cards">
-        <div class="card">
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-cloudy-background-beautiful-natural-streaks-of-sky-and-clouds-red-image_15684333.jpg&quot; alt="Campo">
-            <h3>Produção Rural</h3>
-            <p>
-                O campo é responsável pela produção de alimentos,
-                matérias-primas e recursos essenciais para a sociedade.
-            </p>
+            <div class="card">
+                <h3>2. Logística e Diesel</h3>
+                <p>O transporte rodoviário domina o escoamento de safras. A flutuação no preço do combustível fóssil encarece o frete, gerando uma inflação em cadeia que atinge os portos e os supermercados.</p>
+            </div>
+
+            <div class="card">
+                <h3>3. Eventos Climáticos</h3>
+                <p>Quebras de safra devido a secas severas ou geadas reduzem a oferta de produtos essenciais (como milho e soja). Menos produto disponível no mercado resulta em preços mais altos (Lei da Oferta e Procura).</p>
+            </div>
         </div>
 
-        <div class="card">
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-cloudy-background-beautiful-natural-streaks-of-sky-and-clouds-red-image_15684333.jpg&quot; alt="Tecnologia">
-            <h3>Tecnologia no Agro</h3>
-            <p>
-                Sensores, drones e automação aumentam a produtividade
-                e reduzem impactos ambientais.
-            </p>
+        <div id="analise" class="info-block">
+            <h2>O Impacto no "Preço da Gôndola"</h2>
+            <p>O Índice de Preços ao Produtor Clima e Insumos (inflação que o produtor sente) costuma ser repassado ao consumidor com um intervalo de alguns meses. Quando o custo de produzir carne, grãos ou leite sobe no campo, o IPCA (inflação oficial) reflete essa alta nos setores de alimentação e bebidas do varejo urbano.</p>
         </div>
-
-        <div class="card">
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-cloudy-background-beautiful-natural-streaks-of-sky-and-clouds-red-image_15684333.jpg&quot; alt="Sustentabilidade">
-            <h3>Sustentabilidade</h3>
-            <p>
-                Produzir preservando os recursos naturais garante qualidade
-                de vida para as futuras gerações.
-            </p>
-        </div>
-    </section>
-
-    <section id="cidade" class="conteudo destaque">
-        <h2>Cidade e Desenvolvimento</h2>
-        <p>
-            A cidade recebe os produtos do campo, gera empregos,
-            distribui conhecimento e fortalece a economia.
-        </p>
-    </section>
-
-    <section id="sustentabilidade" class="conteudo">
-        <h2>União que Transforma</h2>
-        <p>
-            Campo e cidade dependem um do outro. Quando trabalham juntos,
-            promovem desenvolvimento econômico, social e ambiental.
-        </p>
-    </section>
+    </main>
 
     <footer>
-        <p>Projeto desenvolvido para o Concurso Agrinho 2026.</p>
-    </footer>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 - Campo e Cidade</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header>
-        <h1>AGRINHO 2026</h1>
-        <p>Campo e Cidade: Conectando Oportunidades</p>
-    </header>
-
-    <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#campo">Campo</a>
-        <a href="#cidade">Cidade</a>
-        <a href="#sustentabilidade">Sustentabilidade</a>
-    </nav>
-
-    <section id="inicio" class="banner">
-        <div class="overlay">
-            <h2>Construindo um Futuro Sustentável</h2>
-            <p>O campo produz, a cidade transforma e todos crescem juntos.</p>
-        </div>
-    </section>
-
-    <section id="sobre" class="conteudo">
-        <h2>Sobre o Projeto</h2>
-        <p>
-            O Programa Agrinho incentiva a educação, a sustentabilidade,
-            a inovação e a valorização da relação entre o campo e a cidade.
-            Este site apresenta como a tecnologia e a conscientização podem
-            ajudar a construir um futuro melhor para todos.
-        </p>
-    </section>
-
-    <section id="campo" class="cards">
-        <div class="card">
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-cloudy-background-beautiful-natural-streaks-of-sky-and-clouds-red-image_15684333.jpg&quot; alt="Campo">
-            <h3>Produção Rural</h3>
-            <p>
-                O campo é responsável pela produção de alimentos,
-                matérias-primas e recursos essenciais para a sociedade.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-cloudy-background-beautiful-natural-streaks-of-sky-and-clouds-red-image_15684333.jpg&quot; alt="Tecnologia">
-            <h3>Tecnologia no Agro</h3>
-            <p>
-                Sensores, drones e automação aumentam a produtividade
-                e reduzem impactos ambientais.
-            </p>
-        </div>
-
-        <div class="card">
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-cloudy-background-beautiful-natural-streaks-of-sky-and-clouds-red-image_15684333.jpg&quot; alt="Sustentabilidade">
-            <h3>Sustentabilidade</h3>
-            <p>
-                Produzir preservando os recursos naturais garante qualidade
-                de vida para as futuras gerações.
-            </p>
-        </div>
-    </section>
-
-    <section id="cidade" class="conteudo destaque">
-        <h2>Cidade e Desenvolvimento</h2>
-        <p>
-            A cidade recebe os produtos do campo, gera empregos,
-            distribui conhecimento e fortalece a economia.
-        </p>
-    </section>
-
-    <section id="sustentabilidade" class="conteudo">
-        <h2>União que Transforma</h2>
-        <p>
-            Campo e cidade dependem um do outro. Quando trabalham juntos,
-            promovem desenvolvimento econômico, social e ambiental.
-        </p>
-    </section>
-
-    <footer>
-        <p>Projeto desenvolvido para o Concurso Agrinho 2026.</p>
+        <p>&copy; 2026 AgroInflação - Análises e Dados Macroeconômicos do Setor.</p>
     </footer>
 
 </body>
